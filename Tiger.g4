@@ -5,7 +5,13 @@ grammar Tiger;
  * Lexer Rules
  */
 
- program : MAIN ;
+ program
+    : MAIN
+    ;
+
+ NEWLINE
+    : [\r\n]+
+    ;
 
  MAIN
     : 'main'
