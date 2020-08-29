@@ -9,6 +9,10 @@ grammar Tiger;
     : MAIN
     ;
 
+ WHITESPACE
+    : [ \t]+
+    ;
+
  NEWLINE
     : [\r\n]+
     ;
