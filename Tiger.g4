@@ -1,6 +1,11 @@
+grammar Tiger;
+
+
 /*
  * Lexer Rules
  */
+
+ program : MAIN ;
 
  MAIN
     : 'main'
@@ -95,31 +100,30 @@
     ;
 
 RESERVED
-    : (
-          MAIN
-        | ARRAY
-        | RETURN
-        | BREAK
-        | DO
-        | ELSE
-        | END
-        | FOR
-        | FUNCTION
-        | IF
-        | IN
-        | LET
-        | OF
-        | THEN
-        | TO
-        | TYPE
-        | VAR
-        | WHILE
-        | ENDIF
-        | BEGIN
-        | ENDDO
-        | INT
-        | FLOAT
-      )
+    :
+    ( MAIN
+    | ARRAY
+    | RETURN
+    | BREAK
+    | DO
+    | ELSE
+    | END
+    | FOR
+    | FUNCTION
+    | IF
+    | IN
+    | LET
+    | OF
+    | THEN
+    | TO
+    | TYPE
+    | VAR
+    | WHILE
+    | ENDIF
+    | BEGIN
+    | ENDDO
+    | INT
+    | FLOAT )
     ;
 
  COMMA
