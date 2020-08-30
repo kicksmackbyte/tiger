@@ -165,7 +165,7 @@ grammar Tiger;
     ;
 
  FLOATLIT
-    : DIGIT+ PERIOD DIGIT+
+    : DIGIT+ PERIOD DIGIT*
     ;
 
  NON_DIGIT

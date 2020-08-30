@@ -23,7 +23,11 @@ int main(int argc, const char* args[])
 
     for(auto token : tokens.getTokens())
     {
-        std::cout << token->toString() << std::endl;
+        if( token->getType() != Token::EOF)
+        {
+            std::cout << "<" << token->getType() << ", \"" << token->getText() << "\">" << std::endl;
+            //std::cout << "<" << ", \"" << token->getText() << "\">" << std::endl;
+        }
     }
 
     TigerParser parser(&tokens);
