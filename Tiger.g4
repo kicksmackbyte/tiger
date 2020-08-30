@@ -10,11 +10,7 @@ grammar Tiger;
     ;
 
  WHITESPACE
-    : [ \t]+
-    ;
-
- NEWLINE
-    : [\r\n]+
+    : [ \t\r\n]+ -> skip
     ;
 
  MAIN
@@ -188,24 +184,36 @@ RESERVED
     : '*'
     ;
 
+ EXPONENT
+    : '**'
+    ;
+
  DIV
     : '/'
     ;
 
- EQ
-    : '='
+ EQUALITY
+    : '=='
     ;
 
- NOT
-    : '!'
+ NOTEQ
+    : '!='
     ;
 
  LTHAN
     : '<'
     ;
 
+ LTHANEQ
+    : '<='
+    ;
+
  GTHAN
     : '>'
+    ;
+
+ GTHANEQ
+    : '>='
     ;
 
  AMP
@@ -214,4 +222,9 @@ RESERVED
 
  PIPE
     : '|'
+    ;
+
+ ASSIGN
+    : ':='
+    | '='
     ;

@@ -89,21 +89,22 @@ std::vector<std::string> TigerParser::_ruleNames = {
 };
 
 std::vector<std::string> TigerParser::_literalNames = {
-  "", "", "", "'main'", "'array'", "'return'", "'break'", "'do'", "'else'", 
+  "", "", "'main'", "'array'", "'return'", "'break'", "'do'", "'else'", 
   "'end'", "'for'", "'function'", "'if'", "'in'", "'let'", "'of'", "'then'", 
   "'to'", "'type'", "'var'", "'while'", "'endif'", "'begin'", "'enddo'", 
   "'int'", "'float'", "", "','", "':'", "';'", "'('", "')'", "'['", "']'", 
-  "'{'", "'}'", "'.'", "'+'", "'-'", "'*'", "'/'", "'='", "'!'", "'<'", 
-  "'>'", "'&'", "'|'"
+  "'{'", "'}'", "'.'", "'+'", "'-'", "'*'", "'**'", "'/'", "'=='", "'!='", 
+  "'<'", "'<='", "'>'", "'>='", "'&'", "'|'"
 };
 
 std::vector<std::string> TigerParser::_symbolicNames = {
-  "", "WHITESPACE", "NEWLINE", "MAIN", "ARRAY", "RETURN", "BREAK", "DO", 
-  "ELSE", "END", "FOR", "FUNCTION", "IF", "IN", "LET", "OF", "THEN", "TO", 
-  "TYPE", "VAR", "WHILE", "ENDIF", "BEGIN", "ENDDO", "INT", "FLOAT", "RESERVED", 
-  "COMMA", "COLON", "SEMICOLON", "LPAREN", "RPAREN", "LBRACKET", "RBRACKET", 
-  "LSQUIGGLE", "RSQUIGGLE", "PERIOD", "PLUS", "MINUS", "ASTERISK", "DIV", 
-  "EQ", "NOT", "LTHAN", "GTHAN", "AMP", "PIPE"
+  "", "WHITESPACE", "MAIN", "ARRAY", "RETURN", "BREAK", "DO", "ELSE", "END", 
+  "FOR", "FUNCTION", "IF", "IN", "LET", "OF", "THEN", "TO", "TYPE", "VAR", 
+  "WHILE", "ENDIF", "BEGIN", "ENDDO", "INT", "FLOAT", "RESERVED", "COMMA", 
+  "COLON", "SEMICOLON", "LPAREN", "RPAREN", "LBRACKET", "RBRACKET", "LSQUIGGLE", 
+  "RSQUIGGLE", "PERIOD", "PLUS", "MINUS", "ASTERISK", "EXPONENT", "DIV", 
+  "EQUALITY", "NOTEQ", "LTHAN", "LTHANEQ", "GTHAN", "GTHANEQ", "AMP", "PIPE", 
+  "ASSIGN"
 };
 
 dfa::Vocabulary TigerParser::_vocabulary(_literalNames, _symbolicNames);
@@ -126,9 +127,9 @@ TigerParser::Initializer::Initializer() {
 
   _serializedATN = {
     0x3, 0x608b, 0xa72a, 0x8133, 0xb9ed, 0x417c, 0x3be7, 0x7786, 0x5964, 
-    0x3, 0x30, 0x7, 0x4, 0x2, 0x9, 0x2, 0x3, 0x2, 0x3, 0x2, 0x3, 0x2, 0x2, 
+    0x3, 0x33, 0x7, 0x4, 0x2, 0x9, 0x2, 0x3, 0x2, 0x3, 0x2, 0x3, 0x2, 0x2, 
     0x2, 0x3, 0x2, 0x2, 0x2, 0x2, 0x5, 0x2, 0x4, 0x3, 0x2, 0x2, 0x2, 0x4, 
-    0x5, 0x7, 0x5, 0x2, 0x2, 0x5, 0x3, 0x3, 0x2, 0x2, 0x2, 0x2, 
+    0x5, 0x7, 0x4, 0x2, 0x2, 0x5, 0x3, 0x3, 0x2, 0x2, 0x2, 0x2, 
   };
 
   atn::ATNDeserializer deserializer;

@@ -12,14 +12,15 @@
 class  TigerLexer : public antlr4::Lexer {
 public:
   enum {
-    WHITESPACE = 1, NEWLINE = 2, MAIN = 3, ARRAY = 4, RETURN = 5, BREAK = 6, 
-    DO = 7, ELSE = 8, END = 9, FOR = 10, FUNCTION = 11, IF = 12, IN = 13, 
-    LET = 14, OF = 15, THEN = 16, TO = 17, TYPE = 18, VAR = 19, WHILE = 20, 
-    ENDIF = 21, BEGIN = 22, ENDDO = 23, INT = 24, FLOAT = 25, RESERVED = 26, 
-    COMMA = 27, COLON = 28, SEMICOLON = 29, LPAREN = 30, RPAREN = 31, LBRACKET = 32, 
-    RBRACKET = 33, LSQUIGGLE = 34, RSQUIGGLE = 35, PERIOD = 36, PLUS = 37, 
-    MINUS = 38, ASTERISK = 39, DIV = 40, EQ = 41, NOT = 42, LTHAN = 43, 
-    GTHAN = 44, AMP = 45, PIPE = 46
+    WHITESPACE = 1, MAIN = 2, ARRAY = 3, RETURN = 4, BREAK = 5, DO = 6, 
+    ELSE = 7, END = 8, FOR = 9, FUNCTION = 10, IF = 11, IN = 12, LET = 13, 
+    OF = 14, THEN = 15, TO = 16, TYPE = 17, VAR = 18, WHILE = 19, ENDIF = 20, 
+    BEGIN = 21, ENDDO = 22, INT = 23, FLOAT = 24, RESERVED = 25, COMMA = 26, 
+    COLON = 27, SEMICOLON = 28, LPAREN = 29, RPAREN = 30, LBRACKET = 31, 
+    RBRACKET = 32, LSQUIGGLE = 33, RSQUIGGLE = 34, PERIOD = 35, PLUS = 36, 
+    MINUS = 37, ASTERISK = 38, EXPONENT = 39, DIV = 40, EQUALITY = 41, NOTEQ = 42, 
+    LTHAN = 43, LTHANEQ = 44, GTHAN = 45, GTHANEQ = 46, AMP = 47, PIPE = 48, 
+    ASSIGN = 49
   };
 
   TigerLexer(antlr4::CharStream *input);
