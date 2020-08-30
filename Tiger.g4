@@ -54,7 +54,7 @@ grammar Tiger;
 
  optional_init
     : /* NULL */
-    | ASSIGN const
+    | ASSIGN constant
     ;
 
  funct_declaration
@@ -108,13 +108,13 @@ grammar Tiger;
     ;
 
  expr
-    : const
+    : constant
     | lvalue
     | expr binary_operator expr
     | LPAREN expr RPAREN
     ;
 
- const
+ constant
     : INTLIT
     | FLOATLIT
     ;
@@ -178,6 +178,10 @@ grammar Tiger;
 
  DIGIT
     : [0-9]
+    ;
+
+ COMMENT
+    : '/*' .*? '*/' -> skip
     ;
 
  WHITESPACE
