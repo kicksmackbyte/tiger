@@ -18,15 +18,17 @@ int main(int argc, const char* args[])
     TigerLexer lexer(&input);
     CommonTokenStream tokens(&lexer);
 
-    std::cout << "Tokens: " << std::endl;
     tokens.fill();
 
+    auto vocabulary = lexer.getVocabulary();
     for(auto token : tokens.getTokens())
     {
-        if( token->getType() != Token::EOF)
+        auto tokenType = token->getType();
+
+        if( tokenType != Token::EOF)
         {
-            std::cout << "<" << token->getType() << ", \"" << token->getText() << "\">" << std::endl;
-            //std::cout << "<" << ", \"" << token->getText() << "\">" << std::endl;
+            auto displayName = vocabulary.getDisplayName(tokenType);
+            std::cout << "<" << displayName << ", \"" << token->getText() << "\">" << std::endl;
         }
     }
 
