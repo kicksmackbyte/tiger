@@ -27,7 +27,7 @@ int main(int argc, const char* args[])
     }
 
     TigerParser parser(&tokens);
-    tree::ParseTree* tree = parser.program();
+    tree::ParseTree* tree = parser.tiger_program();
 
     std::cout << "Parse tree (Lisp format): " << std::endl;
     std::cout << tree->toStringTree(&parser) << std::endl;
