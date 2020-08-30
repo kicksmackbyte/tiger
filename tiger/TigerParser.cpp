@@ -101,10 +101,9 @@ std::vector<std::string> TigerParser::_symbolicNames = {
   "", "WHITESPACE", "MAIN", "ARRAY", "RETURN", "BREAK", "DO", "ELSE", "END", 
   "FOR", "FUNCTION", "IF", "IN", "LET", "OF", "THEN", "TO", "TYPE", "VAR", 
   "WHILE", "ENDIF", "BEGIN", "ENDDO", "INT", "FLOAT", "RESERVED", "COMMA", 
-  "COLON", "SEMICOLON", "LPAREN", "RPAREN", "LBRACKET", "RBRACKET", "LSQUIGGLE", 
-  "RSQUIGGLE", "PERIOD", "PLUS", "MINUS", "ASTERISK", "EXPONENT", "DIV", 
-  "EQUALITY", "NOTEQ", "LTHAN", "LTHANEQ", "GTHAN", "GTHANEQ", "AMP", "PIPE", 
-  "ASSIGN"
+  "COLON", "SEMI", "LPAREN", "RPAREN", "LBRACK", "RBRACK", "LBRACE", "RBRACE", 
+  "PERIOD", "PLUS", "MINUS", "MULT", "EXP", "DIV", "EQ", "NEQ", "LESSER", 
+  "LESSEREQ", "GREATER", "GREATEREQ", "AND", "OR", "ASSIGN"
 };
 
 dfa::Vocabulary TigerParser::_vocabulary(_literalNames, _symbolicNames);

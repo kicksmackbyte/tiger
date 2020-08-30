@@ -140,7 +140,7 @@ RESERVED
     : ':'
     ;
 
- SEMICOLON
+ SEMI
     : ';'
     ;
 
@@ -152,19 +152,19 @@ RESERVED
     : ')'
     ;
 
- LBRACKET
+ LBRACK
     : '['
     ;
 
- RBRACKET
+ RBRACK
     : ']'
     ;
 
- LSQUIGGLE
+ LBRACE
     : '{'
     ;
 
- RSQUIGGLE
+ RBRACE
     : '}'
     ;
 
@@ -180,11 +180,11 @@ RESERVED
     : '-'
     ;
 
- ASTERISK
+ MULT
     : '*'
     ;
 
- EXPONENT
+ EXP
     : '**'
     ;
 
@@ -192,35 +192,35 @@ RESERVED
     : '/'
     ;
 
- EQUALITY
+ EQ
     : '=='
     ;
 
- NOTEQ
+ NEQ
     : '!='
     ;
 
- LTHAN
+ LESSER
     : '<'
     ;
 
- LTHANEQ
+ LESSEREQ
     : '<='
     ;
 
- GTHAN
+ GREATER
     : '>'
     ;
 
- GTHANEQ
+ GREATEREQ
     : '>='
     ;
 
- AMP
+ AND
     : '&'
     ;
 
- PIPE
+ OR
     : '|'
     ;
 

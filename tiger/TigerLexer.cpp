@@ -63,11 +63,10 @@ std::vector<std::string> TigerLexer::_ruleNames = {
   u8"WHITESPACE", u8"MAIN", u8"ARRAY", u8"RETURN", u8"BREAK", u8"DO", u8"ELSE", 
   u8"END", u8"FOR", u8"FUNCTION", u8"IF", u8"IN", u8"LET", u8"OF", u8"THEN", 
   u8"TO", u8"TYPE", u8"VAR", u8"WHILE", u8"ENDIF", u8"BEGIN", u8"ENDDO", 
-  u8"INT", u8"FLOAT", u8"RESERVED", u8"COMMA", u8"COLON", u8"SEMICOLON", 
-  u8"LPAREN", u8"RPAREN", u8"LBRACKET", u8"RBRACKET", u8"LSQUIGGLE", u8"RSQUIGGLE", 
-  u8"PERIOD", u8"PLUS", u8"MINUS", u8"ASTERISK", u8"EXPONENT", u8"DIV", 
-  u8"EQUALITY", u8"NOTEQ", u8"LTHAN", u8"LTHANEQ", u8"GTHAN", u8"GTHANEQ", 
-  u8"AMP", u8"PIPE", u8"ASSIGN"
+  u8"INT", u8"FLOAT", u8"RESERVED", u8"COMMA", u8"COLON", u8"SEMI", u8"LPAREN", 
+  u8"RPAREN", u8"LBRACK", u8"RBRACK", u8"LBRACE", u8"RBRACE", u8"PERIOD", 
+  u8"PLUS", u8"MINUS", u8"MULT", u8"EXP", u8"DIV", u8"EQ", u8"NEQ", u8"LESSER", 
+  u8"LESSEREQ", u8"GREATER", u8"GREATEREQ", u8"AND", u8"OR", u8"ASSIGN"
 };
 
 std::vector<std::string> TigerLexer::_channelNames = {
@@ -92,11 +91,11 @@ std::vector<std::string> TigerLexer::_symbolicNames = {
   "", u8"WHITESPACE", u8"MAIN", u8"ARRAY", u8"RETURN", u8"BREAK", u8"DO", 
   u8"ELSE", u8"END", u8"FOR", u8"FUNCTION", u8"IF", u8"IN", u8"LET", u8"OF", 
   u8"THEN", u8"TO", u8"TYPE", u8"VAR", u8"WHILE", u8"ENDIF", u8"BEGIN", 
-  u8"ENDDO", u8"INT", u8"FLOAT", u8"RESERVED", u8"COMMA", u8"COLON", u8"SEMICOLON", 
-  u8"LPAREN", u8"RPAREN", u8"LBRACKET", u8"RBRACKET", u8"LSQUIGGLE", u8"RSQUIGGLE", 
-  u8"PERIOD", u8"PLUS", u8"MINUS", u8"ASTERISK", u8"EXPONENT", u8"DIV", 
-  u8"EQUALITY", u8"NOTEQ", u8"LTHAN", u8"LTHANEQ", u8"GTHAN", u8"GTHANEQ", 
-  u8"AMP", u8"PIPE", u8"ASSIGN"
+  u8"ENDDO", u8"INT", u8"FLOAT", u8"RESERVED", u8"COMMA", u8"COLON", u8"SEMI", 
+  u8"LPAREN", u8"RPAREN", u8"LBRACK", u8"RBRACK", u8"LBRACE", u8"RBRACE", 
+  u8"PERIOD", u8"PLUS", u8"MINUS", u8"MULT", u8"EXP", u8"DIV", u8"EQ", u8"NEQ", 
+  u8"LESSER", u8"LESSEREQ", u8"GREATER", u8"GREATEREQ", u8"AND", u8"OR", 
+  u8"ASSIGN"
 };
 
 dfa::Vocabulary TigerLexer::_vocabulary(_literalNames, _symbolicNames);
